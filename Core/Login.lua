@@ -3,8 +3,9 @@ local Login = {}
 function Login:Start(callback)
 
 	local HttpService = game:GetService("HttpService")
+	local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 
-	local VALID_URL = "https://raw.githubusercontent.com/NyxStrickss/Hub-/main/keys.json"
+	local URL = "https://raw.githubusercontent.com/NyxStrickss/Hub-/main/keys.json"
 
 	local Player = game.Players.LocalPlayer
 	local gui = Instance.new("ScreenGui", Player.PlayerGui)
@@ -22,20 +23,35 @@ function Login:Start(callback)
 	btn.MouseButton1Click:Connect(function()
 
 		local success, response = pcall(function()
-			return game:HttpGet(VALID_URL)
+			return game:HttpGet(URL)
 		end)
 
 		if success then
 			local data = HttpService:JSONDecode(response)
 
-			if data[box.Text] then
-				gui:Destroy()
-				callback()
+			local keyData = data[box.Text]
+
+			if keyData then
+				-- 🔐 SI NO TIENE HWID → LO REGISTRA
+				if keyData == "" then
+					box.Text = "KEY ACTIVADA (pon HWID manual en JSON)"
+					print("HWID:", hwid)
+
+				-- ✔️ SI COINCIDE
+				elseif keyData == hwid then
+					gui:Destroy()
+					callback()
+
+				-- ❌ SI NO COINCIDE
+				else
+					box.Text = "KEY EN USO ❌"
+				end
+
 			else
-				box.Text = "INVALID KEY"
+				box.Text = "INVALID KEY ❌"
 			end
 		else
-			box.Text = "ERROR API"
+			box.Text = "ERROR API ❌"
 		end
 
 	end)
