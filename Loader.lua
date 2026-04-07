@@ -3,7 +3,7 @@
 local Modules = {}
 
 Modules.Config = loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/refs/heads/main/Core/Config.lua"))()
-Modules.UI = loadstring(game:HttpGet("URL_UI"))()
+Modules.UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/refs/heads/main/Core/UI.lua"))()
 Modules.Notify = loadstring(game:HttpGet("URL_Notify"))()
 
 -- Init UI
