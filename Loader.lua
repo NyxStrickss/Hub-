@@ -14,9 +14,10 @@ Modules.Login:Start(function()
 	local UI = Modules.UI:Init(Modules.Config)
 
 	-- 📦 LOAD MODULES
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/main/Modules/Visual.lua"))()(UI, Modules)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/main/Modules/Radar.lua"))()(UI, Modules)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/main/Modules/Player.lua"))()(UI, Modules)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/main/Modules/Visual.lua"))()(UI, Modules)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/main/Modules/Player.lua"))()(UI, Modules)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/main/Modules/Combat.lua"))()(UI, Modules)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/main/Modules/Misc.lua"))()(UI, Modules)
 
 	Modules.Notify("Hub cargado correctamente 🧠")
 
