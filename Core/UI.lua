@@ -56,6 +56,18 @@ function UI:Init(Config)
 	title.TextColor3 = Color3.new(1,1,1)
 	title.BackgroundTransparency = 1
 	title.TextSize = 22
+	local close = Instance.new("TextButton", main)
+close.Size = UDim2.new(0,30,0,30)
+close.Position = UDim2.new(1,-35,0,5)
+close.Text = "X"
+close.BackgroundColor3 = Color3.fromRGB(255,60,60)
+close.TextColor3 = Color3.new(1,1,1)
+
+Instance.new("UICorner", close)
+
+close.MouseButton1Click:Connect(function()
+	main:Destroy()
+end)
 
 	-- 📑 SIDEBAR
 	local sidebar = Instance.new("Frame", main)
