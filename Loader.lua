@@ -10,7 +10,7 @@ Modules.Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxS
 local UI = Modules.UI:Init(Modules.Config)
 
 -- Load Modules
-loadstring(game:HttpGet("URL_Visual"))()(UI, Modules)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/refs/heads/main/Modules/Visual.lua"))()(UI, Modules)
 loadstring(game:HttpGet("URL_Radar"))()(UI, Modules)
 loadstring(game:HttpGet("URL_Player"))()(UI, Modules)
 
