@@ -1,5 +1,4 @@
 {
-  "NYX-123": true,
-  "PRO-999": true,
-  "VIP-777": true
+  "NYX-123": "HWID_AQUI",
+  "PRO-999": "HWID_AQUI"
 }
