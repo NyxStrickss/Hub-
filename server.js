@@ -4,8 +4,8 @@ const app = express();
 app.use(express.json());
 
 let keys = {
-  "NYX-123": "",
-  "PRO-999": ""
+  "NYX123": "",
+  "PRO999": ""
 };
 
 app.post("/verify", (req, res) => {
