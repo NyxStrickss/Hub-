@@ -11,7 +11,7 @@ local UI = Modules.UI:Init(Modules.Config)
 
 -- Load Modules
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/refs/heads/main/Modules/Visual.lua"))()(UI, Modules)
-loadstring(game:HttpGet("URL_Radar"))()(UI, Modules)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/refs/heads/main/Modules/Radar.lua"))()(UI, Modules)
 loadstring(game:HttpGet("URL_Player"))()(UI, Modules)
 
 Modules.Notify("Hub cargado correctamente 🧠")
