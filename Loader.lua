@@ -2,7 +2,7 @@
 
 local Modules = {}
 
-Modules.Config = loadstring(game:HttpGet("URL_Config"))()
+Modules.Config = loadstring(game:HttpGet("https://raw.githubusercontent.com/NyxStrickss/Hub-/refs/heads/main/Core/Config.lua"))()
 Modules.UI = loadstring(game:HttpGet("URL_UI"))()
 Modules.Notify = loadstring(game:HttpGet("URL_Notify"))()
 
